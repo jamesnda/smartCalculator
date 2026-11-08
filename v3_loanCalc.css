@@ -1,0 +1,96 @@
+.loanCalc,
+.loanCalc * {
+    box-sizing: border-box;
+}
+
+.loanCalc {
+    width: min(100%, 620px);
+    margin: 0 auto;
+    padding: clamp(18px, 4vw, 32px);
+    border: 1px solid #d8ded7;
+    border-radius: 8px;
+    background: #fffefa;
+    color: #202b25;
+}
+
+.loanHead h3 {
+    margin: 0 0 20px;
+    color: #245c45;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.loanCalc .formInput {
+    display: grid;
+    gap: 7px;
+}
+
+.loanCalc label {
+    margin-top: 10px;
+    color: #536158;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#loanAmount,
+#period,
+#interestRate {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #cbd4cb;
+    border-radius: 5px;
+    background: #f9faf6;
+    color: #202b25;
+    font: inherit;
+}
+
+#loanError {
+    min-height: 20px;
+    margin: 10px 0 0;
+    color: #a53d2b;
+    font-size: 13px;
+}
+
+.subdivs {
+    display: grid;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.subDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid #e0e5dc;
+    border-radius: 5px;
+    background: #f3f5ef;
+    font-size: 14px;
+}
+
+.amountDetail,
+.amountDisplay {
+    margin: 0;
+}
+
+.amountDisplay {
+    color: #245c45;
+    font-weight: 700;
+    text-align: right;
+}
+
+#calcButton {
+    width: 100%;
+    min-height: 46px;
+    margin-top: 16px;
+    border: 0;
+    border-radius: 5px;
+    background: #245c45;
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}

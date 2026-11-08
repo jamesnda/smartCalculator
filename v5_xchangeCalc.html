@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xchange Calc</title>
+    <link rel="stylesheet" href="v5_xchangeCalc.css">
+</head>
+<body>
+    <div class="xchangeCalcContainer">
+        <section id="converterContainer">
+            <div class="convertHead">
+                <h2>Unit Converter</h2>
+            </div>
+            
+            <div class="convertBody">
+                <select name="conversions" id="conversionCategory" class="converterCalc">
+                    <option value="" selected disabled>Choose a category</option>
+                    <option value="currency">Currency</option>
+                    <option value="length">Length</option>
+                    <option value="mass">Mass</option>
+                    <option value="temperature">Temperature</option>
+                    <option value="area">Area</option>
+                    <option value="volume">Volume</option>
+                    <option value="speed">Speed</option>
+                    <option value="time">Time</option>
+                </select>
+
+                <div class="toFro">
+                    <div class="unitGroup">
+                        <label for="fromUnit">From</label>
+                        <select id="fromUnit" class="converterCalc" disabled><option value="">Select unit</option></select>
+                    </div>
+                    <div class="unitGroup">
+                        <label for="toUnit">To</label>
+                        <select id="toUnit" class="converterCalc" disabled><option value="">Select unit</option></select>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="convertNum">
+                <label for="input">Value</label>
+                <input type="number" id="input" class="converterCalc" placeholder="Enter value">
+
+                <div id="result" class="converterCalc" aria-live="polite">Choose a category to begin.</div>
+                <p id="currencyAttribution" hidden></p>
+            </div>
+            
+        </section>
+    
+    </div>
+</body>
+<script src="v5_xchangeCalc.js"></script>
+</html>

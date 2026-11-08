@@ -37,15 +37,15 @@ It is designed not only as a calculator but also as a practical learning project
 
 ### 🧮 Mathematical Calculator
 
-A general-purpose calculator capable of performing common mathematical operations such as:
+A general-purpose calculator supporting:
 
 * Addition
 * Subtraction
 * Multiplication
 * Division
-* Percentage
-* Decimal calculations
-* Clear/reset operations
+* Remainder (modulo)
+* Decimal calculations and parentheses
+* Backspace and on/off controls
 
 ---
 
@@ -53,13 +53,13 @@ A general-purpose calculator capable of performing common mathematical operation
 
 The loan calculator helps users estimate their loan repayment.
 
-Possible inputs include:
+Inputs:
 
 * Loan amount
 * Interest rate
 * Loan duration
 
-Possible outputs include:
+Results:
 
 * Monthly payment
 * Total repayment
@@ -82,33 +82,11 @@ It then provides the corresponding BMI value and category.
 
 ### 💱 Currency Converter
 
-The currency converter allows users to convert an amount from one currency to another.
+Converts between 165 currencies, including RWF, using daily exchange rates from [ExchangeRate-API](https://www.exchangerate-api.com/). Rates are cached for the browser session, their update time is shown, and the provider is credited in the converter. An internet connection is required; entered amounts stay in the browser.
 
-Example:
+### 📐 Unit Converter
 
-```text
-RWF → USD
-USD → EUR
-EUR → GBP
-```
-
-The application can eventually be connected to a live currency-exchange API so that exchange rates can be updated automatically.
-
----
-
-### 📏 Measurement Converter
-
-The measurement converter provides conversions between different units.
-
-Examples include:
-
-* Kilometers ↔ Miles
-* Meters ↔ Feet
-* Kilograms ↔ Pounds
-* Celsius ↔ Fahrenheit
-* Liters ↔ Gallons
-
-Additional units can be added as the project develops.
+Converts values across length, mass, temperature, area, volume, speed, and time units. Temperature conversion handles Celsius, Fahrenheit, and Kelvin and rejects values below absolute zero.
 
 ---
 
@@ -121,8 +99,7 @@ Additional units can be added as the project develops.
 | JavaScript    | Logic and interactivity                         |
 | DOM API       | Manipulating webpage elements                   |
 | Events        | Handling user interactions                      |
-| Local Storage | Saving selected data/settings where appropriate |
-| APIs          | Obtaining live currency data where applicable   |
+| ExchangeRate-API | Daily currency rates and RWF conversion       |
 
 ---
 
@@ -185,38 +162,27 @@ Objects and arrays can be used to organize currencies, units, calculator categor
 
 ## 📂 Project Structure
 
-A possible project structure is:
+A project structure:
 
 ```text
 smartCalculator/
-│
-├── index.html
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   ├── main.js
-│   ├── mathCalculator.js
-│   ├── loanCalculator.js
-│   ├── bmiCalculator.js
-│   ├── currencyConverter.js
-│   └── measurementConverter.js
-│
-├── assets/
-│   ├── images/
-│   └── icons/
-│
-└── README.md
+├── index.html              # Static-host entry point
+├── v1_index.html           # SmartCalc application shell
+├── v1_app.js               # Calculator navigation and loader
+├── v1_style.css            # Shared responsive styles
+├── v2_mathCalc.html/js/css # Arithmetic calculator
+├── v3_loanCalc.html/js/css # Loan calculator
+├── v4_bmiCalc.html/js/css  # BMI screening calculator
+├── v5_xchangeCalc.html/js/css # Unit converter
+├── README.md
+└── LICENSE
 ```
-
-As the project grows, the JavaScript can be separated into modules so that each calculator has its own responsibility.
 
 ---
 
 ## ▶️ How to Run
 
-### Option 1 — Open Locally
+### Run Locally
 
 1. Clone the repository:
 
@@ -226,13 +192,13 @@ git clone https://github.com/YOUR-USERNAME/smartCalculator.git
 
 2. Open the project folder.
 
-3. Open `index.html` in your browser.
+3. Start a static web server in the project folder:
 
----
+```bash
+python -m http.server 8000
+```
 
-### Option 2 — VS Code
-
-Open the project in **Visual Studio Code** and use a local development server such as **Live Server**.
+4. Open `http://localhost:8000` in your browser. The app fetches calculator markup, so use a local server instead of opening the HTML through `file://`.
 
 ---
 
@@ -275,7 +241,7 @@ Planned improvements may include:
 * [ ] Calculation history
 * [ ] Dark/light mode
 * [ ] Keyboard support
-* [ ] Live currency exchange rates
+* [ ] Historical currency-rate lookup
 * [ ] Improved accessibility
 * [ ] Progressive Web App (PWA) functionality
 
@@ -309,6 +275,4 @@ Interested in the intersection of:
 
 ## 📄 License
 
-This project is intended primarily for learning, experimentation, and educational purposes.
-
-More licensing information can be added as the project evolves.
+This project is licensed under the MIT License. See [LICENSE](LICENSE).

@@ -1,0 +1,91 @@
+.xchangeCalcContainer,
+.xchangeCalcContainer * {
+    box-sizing: border-box;
+}
+
+.xchangeCalcContainer {
+    width: min(100%, 700px);
+    margin: 0 auto;
+}
+
+#converterContainer {
+    display: grid;
+    gap: 22px;
+    padding: clamp(18px, 4vw, 32px);
+    border: 1px solid #d8ded7;
+    border-radius: 8px;
+    background: #fffefa;
+}
+
+.convertHead h2 {
+    margin: 0;
+    color: #245c45;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.convertBody,
+.convertNum,
+.unitGroup {
+    display: grid;
+    gap: 8px;
+}
+
+.toFro {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.xchangeCalcContainer label {
+    color: #536158;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.converterCalc {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #cbd4cb;
+    border-radius: 5px;
+    background: white;
+    color: #202b25;
+    font: inherit;
+}
+
+.converterCalc:disabled {
+    background: #f1f3ee;
+    color: #738078;
+}
+
+#result {
+    min-height: 54px;
+    padding: 14px;
+    border-left: 3px solid #d2764c;
+    background: #f3f5ef;
+    color: #245c45;
+    font-size: 17px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+    .toFro {
+        grid-template-columns: 1fr;
+    }
+}
+
+#currencyAttribution {
+    margin: -10px 0 0;
+    color: #647169;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#currencyAttribution a {
+    color: #245c45;
+    font-weight: 700;
+}

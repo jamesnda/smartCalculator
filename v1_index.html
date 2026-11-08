@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCalc</title>
+    <link rel="stylesheet" href="v1_style.css?v=2">
+
+    
+</head>
+<body>
+    <div class="appShell">
+        <header class="projectHeading">
+            <div>
+                <p class="eyebrow">EVERYDAY TOOLKIT</p>
+                <h1>James-SmartCalc</h1>
+            </div>
+            <p class="headingSummary">Useful answers for the numbers in front of you.</p>
+        </header>
+        
+        <!--Navigation bar-->
+        <div class="calcContainer">
+            <nav class="navCalc" aria-label="Calculators">
+                <button type="button" class="navBtn" id="mathBtn" aria-pressed="false">Math</button>
+                <button type="button" class="navBtn" id="loanBtn" aria-pressed="false">Loan</button>
+                <button type="button" class="navBtn" id="bmiBtn" aria-pressed="false">BMI</button>
+                <button type="button" class="navBtn" id="xchangeBtn" aria-pressed="false">Unit converter</button>
+            </nav>
+
+            <section class="calcDisplay" id="calculatorWorkspace">
+                <div class="welcomeNote">
+                    <p class="eyebrow">SMARTCALC / WORKSPACE</p>
+                    <h2 class="welcome">Calculations, made practical.</h2>
+                    <p class="wonderNote">Choose a tool to get a clear answer, without leaving the page.</p>
+                    <p class="manyInOne">Arithmetic <span>·</span> Repayments <span>·</span> BMI <span>·</span> Unit and Currency conversions</p>
+                </div>
+            </section>
+
+        </div>
+        <footer class="footerDisplay">Your entered values stay in this browser. Live exchange rates require an internet connection.</footer>
+    </div>
+</body>
+<script src="v1_app.js"></script>
+</html>

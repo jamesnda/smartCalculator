@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calc</title>
+    <link rel="stylesheet" href="v3_loanCalc.css">
+
+</head>
+<body>
+    <div class="loanCalc">
+        <div class="loanHead">
+            <h3>Loan Calculator</h3>
+        </div>
+        
+        <form>
+            <div class="formInput">
+                <label for="loanAmount">Loan amount (RWF)</label>
+                <input type="number" id="loanAmount" min="0.01" step="any" placeholder="e.g. 5,000,000" required>
+                <label for="period">Repayment period (years)</label>
+                <input type="number" id="period" min="1" step="1" placeholder="e.g. 5" required>
+                <label for="interestRate">Annual interest rate (%)</label>
+                <input type="number" id="interestRate" min="0" max="100" step="any" placeholder="e.g. 15.6" required>
+            </div>
+            <p id="loanError" role="status" aria-live="polite"></p>
+            <div class="subdivs">
+                <div class="subDiv"><p class="amountDetail">Monthly Repayment (Rwf)</p><p class="amountDisplay" id="monthlyRepayment">0</p></div>
+                <div class="subDiv"><p class="amountDetail">Total Interest (Rwf)</p><p class="amountDisplay" id="totalInterest">0</p></div>
+                <div class="subDiv"><p class="amountDetail">Total Amount (Rwf)</p><p class="amountDisplay" id="totalAmount">0</p></div>
+            </div>
+            <button type="submit" id="calcButton">Calculate</button>
+        </form>
+        
+    </div>
+    
+    
+</body>
+    <script src="v3_loanCalc.js"></script>
+</html>

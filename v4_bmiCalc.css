@@ -1,0 +1,141 @@
+.bmiApp,
+.bmiApp * {
+    box-sizing: border-box;
+}
+
+.bmiApp {
+    width: min(100%, 850px);
+    margin: 0 auto;
+    padding: clamp(16px, 4vw, 30px);
+    border: 1px solid #d8ded7;
+    border-radius: 8px;
+    background: #fffefa;
+    color: #202b25;
+}
+
+.bmiApp h1 {
+    margin: 0 0 18px;
+    color: #245c45;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.disclaimer,
+.bmiInput,
+.bmiResults,
+.underweightBmi,
+.normalweightBmi,
+.overweightBmi,
+.obeseCat1WeightBmi,
+.obeseCat2WeightBmi,
+.obeseCat3WeightBmi {
+    padding: 18px;
+    border: 1px solid #e0e5dc;
+    border-radius: 5px;
+    background: #f5f6f1;
+}
+
+.disclaimerContent {
+    display: grid;
+    gap: 14px;
+}
+
+.discContHead h4,
+.discContHead p {
+    margin: 0 0 6px;
+}
+
+.discContHead h4 {
+    font-size: 17px;
+}
+
+.discContBody {
+    color: #536158;
+    line-height: 1.6;
+}
+
+.discContBody ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.bmiInput form {
+    display: grid;
+    gap: 8px;
+}
+
+.bmiApp label {
+    margin-top: 8px;
+    color: #536158;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.bmiApp .formInput {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #cbd4cb;
+    border-radius: 5px;
+    background: white;
+    color: #202b25;
+    font: inherit;
+}
+
+.calculateBmi {
+    min-height: 44px;
+    margin-top: 10px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 5px;
+    background: #245c45;
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.bmiResults {
+    margin-top: 14px;
+    color: #245c45;
+    font-weight: 700;
+}
+
+.bmiApp table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 12px 0;
+    overflow-x: auto;
+    border-collapse: collapse;
+}
+
+.bmiApp th,
+.bmiApp td {
+    min-width: 130px;
+    padding: 9px;
+    border: 1px solid #d2dacf;
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.45;
+}
+
+.bmiApp th {
+    background: #e8eee4;
+    color: #245c45;
+}
+
+.bmiNote {
+    margin: 0 0 10px;
+    padding: 12px;
+    border-left: 3px solid #d2764c;
+    background: #f7eee7;
+    line-height: 1.5;
+}
+
+.finalRemark {
+    margin-bottom: 0;
+    color: #536158;
+    line-height: 1.5;
+}

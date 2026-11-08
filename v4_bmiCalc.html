@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calc</title>
+    <link rel="stylesheet" href="v4_bmiCalc.css">
+    
+</head>
+<body>
+    <div class="bmiApp">
+        <h1>BMI Calculator</h1>
+        <div class="disclaimer">
+            <div class="disclaimerContent">
+                <div class="discContHead">
+                    <h4>Important Warnings for a BMI App</h4>
+                    <p>BMI App's Disclaimers:</p>
+                </div>
+                <div class="discContBody">
+                    <ul>
+                        <li>BMI is a screening tool, not a diagnosis.</li>
+                        <li>People with high muscle mass (e.g., athletes) may have a high BMI without excess body fat.</li>
+                        <li>BMI categories may not apply equally to children, adolescents, pregnant individuals, or some older adults.</li>
+                        <li>If you have symptoms such as unexplained weight loss or gain, or other health concerns, consult a healthcare professional regardless of your BMI.</li>
+                    </ul>
+                </div>
+                
+                <button type="button" id="bmiChecker" class="calculateBmi">Check Your BMI</button>
+            </div>
+        </div>
+        <div class="bmiDisplay">
+            <div class="bmiInput">
+                <form>
+                    <label for="userHeight">Height (cm)</label>
+                    <input type="number" class="formInput" id="userHeight" min="1" max="300" step="any" placeholder="e.g. 170" required>
+                    <label for="userWeight">Weight (kg)</label>
+                    <input type="number" class="formInput" id="userWeight" min="1" max="700" step="any" placeholder="e.g. 65" required>
+                    <button type="submit" id="calculateBmiBtn" class="calculateBmi">Check BMI</button>
+                </form>
+            </div>
+        </div>
+        <div class="bmiResults" aria-live="polite"></div>
+        
+        
+        <!--Under Weight Results-->
+        <div class="underweightBmi">
+            <p class="bmiNote">Your BMI indicates that you are classified as <span>under weight</span>.This may increase your risk of nutritional deficiencies and other health problems.</p>
+            
+            <table>
+                <thead>
+                    <th>Possible Causes</th>
+                    <th>Health Risks</th>
+                    <th>Suggested Advice</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Poor nutrition</td>
+                        <td>Weak immune system</td>
+                        <td>Eat balanced meals more frequently.</td>
+                    </tr>
+                    <tr>
+                        <td>Eating disorders</td>
+                        <td>Vitamin and mineral deficiencies</td>
+                        <td>Increase protein intake</td>
+                    </tr>
+                    <tr>
+                        <td>Chronic illness</td>
+                        <td>Osteoporosis</td>
+                        <td>Consume healthy calories-rich foods.</td>
+                    </tr>
+                    <tr>
+                        <td>Hyperthyroidism</td>
+                        <td>Anemia</td>
+                        <td>Strength-training exercises to build muscle.</td>
+                    </tr>
+                    <tr>
+                        <td>Malabsorption disorders</td>
+                        <td>Delayed wound healing</td>
+                        <td>Drink enough water.</td>
+                    </tr>
+                    <tr>
+                        <td>Excessive physical activity</td>
+                        <td>Fertility problems</td>
+                        <td>Sleep adequately.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="finalRemark"> <strong>Please, Consult a healthcare professional if weight loss is unexplained.</strong></p>
+        </div>
+        <!--Normal Weight Results-->
+        <div class="normalweightBmi">
+            <p  class="bmiNote">Your BMI indicates that you are classified as <span>normal weight</span>. Continue maintaining healthy lifestyle habits.</p>
+            
+            <table>
+                <thead>
+                    <th>Health Status</th>
+                    <th>Suggested Advice</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lowest risk for most weight-related diseases</td>
+                        <td>Continue balanced nutrition</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Maintain good sleep habits</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Consume healthy calories-rich foods</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Stay hydrated</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Avoid smoking</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Limit alcohol</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Monitor weight periodically</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="finalRemark"> <strong>Please, Consult a healthcare professional if you encounter any unexplained weight loss or excessive weight gain.</strong></p>
+        </div>
+
+        <!--Over Weight Results-->
+        <div class="overweightBmi">
+            <p  class="bmiNote">Your BMI indicates that you are classified as <span>overweight</span>.Small lifestyle changes can reduce your future health risks.</p>
+            
+            <table>
+                <thead>
+                    <th>Health Risks</th>
+                    <th></th>
+                    <th>Suggested Advice</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>Nutritional advice:</td>
+                        <td>Exercise advice:</td>
+                        <td>Lifestyle advice:</td>
+                    </tr>
+                    <tr>
+                        <td>High blood pressure</td>
+                        <td>Reduce sugary drinks</td>
+                        <td>At least 150 minutes of moderate physical activity per week</td>
+                        <td>Sleep 7–9 hours</td>
+                    </tr>
+                    <tr>
+                        <td>Type 2 diabetes</td>
+                        <td>Eat more vegetables and fruits</td>
+                        <td>Strength training twice weekly</td>
+                        <td>Manage stress</td>
+                    </tr>
+                    <tr>
+                        <td>Heart disease</td>
+                        <td>Limit processed foods</td>
+                        <td></td>
+                        <td>Monitor weight monthly</td>
+                    </tr>
+                    <tr>
+                        <td>Joint pain</td>
+                        <td>Reduce portion sizes</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Sleep apnea</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <p class="finalRemark"> <strong>Please, Consult a healthcare professional if additional support is needed.</strong></p>
+        </div>
+
+        <!--Obese Category One Results-->
+        <div class="obeseCat1WeightBmi">
+            <p  class="bmiNote">Your BMI indicates that you are classified as <span>Obesity Category 1</span>. A structured weight management plan may improve your overall health.</p>
+            
+            <table>
+                <thead>
+                    <th>Health Risks</th>
+                    <th>Suggested Advice</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>High risk of Diabetes</td>
+                        <td>Consult a doctor</td>
+                    </tr>
+                    <tr>
+                        <td>High risk of High risk of Diabetes</td>
+                        <td>Meet with a registered dietitian</td>
+                    </tr>
+                    <tr>
+                        <td>High risk of Heart disease</td>
+                        <td>Begin a supervised exercise program</td>
+                    </tr>
+                    <tr>
+                        <td>High risk of Fatty liver disease</td>
+                        <td>Aim for gradual weight loss (about 0.5–1 kg per week)</td>
+                    </tr>
+                    <tr>
+                        <td>High risk of Certain cancers</td>
+                        <td>Monitor blood pressure and blood sugar as recommended</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <p class="finalRemark"> <strong>Please, Consult a healthcare professional if you encounter any unexplained weight loss or excessive weight gain.</strong></p>
+        </div>
+
+        <!--Obese Category Two Results-->
+        <div class="obeseCat2WeightBmi">
+            <p  class="bmiNote">Your BMI indicates that you are classified as <span>Severe Obesity</span>.</p>
+            
+            <table>
+                <thead>
+                    <th>Health Risks</th>
+                    <th>Suggested Advice</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Very high risk of Stroke</td>
+                        <td>Schedule a comprehensive medical evaluation</td>
+                    </tr>
+                    <tr>
+                        <td>Very high risk of Heart attack</td>
+                        <td>Follow a medically supervised nutrition and exercise plan</td>
+                    </tr>
+                    <tr>
+                        <td>Very high risk of Sleep apnea</td>
+                        <td>Discuss additional treatment options if appropriate</td>
+                    </tr>
+                    <tr>
+                        <td>Very high risk of Osteoarthritis</td>
+                        <td>Monitor cardiovascular risk factors regularly</td>
+                    </tr>
+                    <tr>
+                        <td>Very high risk of Kidney disease</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <p class="finalRemark"> <strong>Medical evaluation is recommended to assess your health and discuss treatment options.</strong></p>
+        </div>
+
+        <!--Obese Category Three Results-->
+        <div class="obeseCat3WeightBmi">
+            <p  class="bmiNote">Your BMI indicates that you are classified as <span>Very Severe Obesity</span>.</p>
+            
+            <table>
+                <thead>
+                    <th>Health Risks</th>
+                    <th>Suggested Advice</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Very high risk of Premature death</td>
+                        <td>Seek prompt evaluation by a healthcare professional.</td>
+                    </tr>
+                    <tr>
+                        <td>Very high risk of Severe cardiovascular disease</td>
+                        <td>Work with a multidisciplinary care team (physician, dietitian, exercise specialist, and, when appropriate, mental health support)</td>
+                    </tr>
+                    <tr>
+                        <td>Very high risk of Respiratory disorders</td>
+                        <td>Follow individualized nutrition and physical activity recommendations</td>
+                    </tr>
+                    <tr>
+                        <td>Very high risk of Diabetes complications</td>
+                        <td>Discuss evidence-based treatment options if lifestyle measures alone are insufficient</td>
+                    </tr>
+                    <tr>
+                        <td>Very high risk of Mobility limitations</td>
+                        <td></td>
+                    </tr>
+                    
+                    
+                </tbody>
+            </table>
+            <p class="finalRemark"> <strong>Please, Seek medical care for a personalized assessment and treatment plan.!</strong></p>
+        </div>
+
+    </div>
+</body>
+<script src="v4_bmiCalc.js"></script>
+</html>
