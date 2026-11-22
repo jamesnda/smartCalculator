@@ -6,7 +6,7 @@ let navBtns = document.querySelectorAll(".navBtn");
     const bmiBtn = document.querySelector("#bmiBtn");
     const xchangeBtn = document.querySelector("#xchangeBtn");
 
-    // 5. CONNECT BUTTONS TO THEIR CALCULATORS
+    // CONNECT BUTTONS TO THEIR CALCULATORS
     mathBtn.addEventListener("click",()=>{
         setActiveCalculator(mathBtn);
         loadCalculator("./v2_mathCalc.html","./v2_mathCalc.css","./v2_mathCalc.js");
